@@ -10,8 +10,9 @@ class Settings:
     model: str = "gpt-4.1-mini"
 
 
-def load_settings() -> Settings:
-    load_dotenv()
+def load_settings(load_env_file: bool = True) -> Settings:
+    if load_env_file:
+        load_dotenv()
 
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
