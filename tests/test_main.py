@@ -9,4 +9,4 @@ def test_get_startup_message_uses_config(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "test-key")
     monkeypatch.setenv("LANGCHAIN_MODEL", "test-model")
 
-    assert get_startup_message() == "LangChain V2 Learning Assistant using model test-model"
+    assert get_startup_message() == "LangChain V2 Learning Assistant ready with model test-model"
